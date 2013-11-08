@@ -1,0 +1,1 @@
+Screens = new Meteor.Collection("screens");

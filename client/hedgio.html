@@ -1,0 +1,38 @@
+<head>
+  <title>HEDGIO</title>
+</head>
+
+<body>
+  {{> screens}}
+</body>
+
+<template name="screens">
+  {{#each screen}}
+    <div id="screen-{{number}}" class="screen {{size}}">
+      <div class="embed">
+        {{{withTemplate type this}}}
+      </div>
+    </div>
+  {{/each}}
+</template>
+
+<template name="image">
+  <img src="{{src}}" />
+</template>
+
+
+<template name="text">
+  <div class="ticker">
+    <marquee behavior="alternate" direction="left">{{src}}</marquee>
+  </div>
+</template>
+
+<template name="mp4">
+  <video width="960" height="540" autoplay loop><source src="{{src}}" type="video/mp4">
+  </video>
+</template>
+
+<template name="youtube">
+  <iframe width="480" height="270" src="//www.youtube.com/embed/{{src}}?playlist={{src}}&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen>
+  </iframe>
+</template>
