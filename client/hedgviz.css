@@ -1,0 +1,51 @@
+/* CSS declarations go here */
+body {
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+}
+.screen {
+    position: relative;
+    color: #999;
+    border: 1px solid #333;
+    box-sizing: border-box;
+    float: left;
+}
+.screen.large {
+    width: 960px;
+    height: 540px;
+    background: #000;
+}
+.screen.medium {
+    width: 480px;
+    height: 270px;
+}
+.screen.small {
+    width: 240px;
+    height: 135px;
+}
+.label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    font-family: sans-serif;
+}
+.embed {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.embed img, .embed video {
+    width: 100%;
+    height: 100%;
+}
+.ticker {
+    margin-top: 190px;
+    font-size: 24px;
+    font-family: sans-serif;
+    color: #fff;
+}
