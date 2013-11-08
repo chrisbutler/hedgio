@@ -31,7 +31,7 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "image",
+    "type": "youtube",
     "src": 'FurB-_vx0Rk'
   },
   {
@@ -44,7 +44,7 @@ var screenList = [
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": "<div class='ticker'><marquee behavior='alternate' direction='left'>BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | </marquee></div>"
+    "src": 'BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | '
   },
   {
     "number": "7",
