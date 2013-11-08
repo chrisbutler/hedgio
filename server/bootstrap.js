@@ -31,8 +31,8 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "youtube",
-    "src": 'FurB-_vx0Rk'
+    "type": "image",
+    "src": '3.jpg'
   },
   {
     "number": "5",
@@ -44,7 +44,7 @@ var screenList = [
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | BLACK BOOK - HEDGEYE | '
+    "src": 'BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | '
   },
   {
     "number": "7",
