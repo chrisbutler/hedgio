@@ -14,7 +14,7 @@ var screenList = [
     "number": "1",
     "size": "large",
     "type": "image",
-    "src": 'twitter.png'
+    "src": 'main.jpg'
   },
   {
     "number": "2",
@@ -26,7 +26,7 @@ var screenList = [
     "number": "3",
     "size": "medium",
     "type": "image",
-    "src": 'HE_W_logo.png'
+    "src": 'HE_logo.png'
   },
   {
     "number": "4",
@@ -44,12 +44,12 @@ var screenList = [
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | BEST IDEA - HEDGEYE | '
+    "src": 'SECTOR SPOTLIGHT'
   },
   {
     "number": "7",
     "size": "large",
     "type": "mp4",
-    "src": 'he-ns-loop-960.mp4'
+    "src": 'http://hedgviz.s3.amazonaws.com/video/he-ns-loop-960.mp4'
   }
 ];
