@@ -26,7 +26,7 @@ var screenList = [
     "number": "3",
     "size": "medium",
     "type": "image",
-    "src": 'HE_logo.png'
+    "src": 'HE_logo.jpg'
   },
   {
     "number": "4",
@@ -44,7 +44,7 @@ var screenList = [
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'SECTOR SPOTLIGHT'
+    "src": 'WWW.HEDGEYE.COM'
   },
   {
     "number": "7",
