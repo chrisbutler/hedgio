@@ -13,43 +13,49 @@ var screenList = [
   {
     "number": "1",
     "size": "large",
-    "type": "image",
-    "src": 'main.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/tickers/twtr/",
+    "src": '1'
   },
   {
     "number": "2",
     "size": "medium",
-    "type": "image",
-    "src": '1.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'chart-loop'
   },
   {
     "number": "3",
     "size": "medium",
     "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/",
     "src": 'HE_logo.jpg'
   },
   {
     "number": "4",
     "size": "medium",
-    "type": "image",
-    "src": '3.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'charts'
   },
   {
     "number": "5",
     "size": "medium",
-    "type": "image",
-    "src": '2.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'heartbeat'
   },
   {
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'WWW.HEDGEYE.COM'
+    "src": 'TWTR - BEST IDEA - '
   },
   {
     "number": "7",
     "size": "large",
     "type": "mp4",
-    "src": 'http://hedgviz.s3.amazonaws.com/video/he-ns-loop-960.mp4'
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": "he-ns-loop-960"
   }
 ];

@@ -17,7 +17,7 @@
 </template>
 
 <template name="image">
-  <img src="http://hedgviz.s3.amazonaws.com/retail/{{src}}" />
+  <img src="{{base}}{{src}}" />
 </template>
 
 <template name="text">
@@ -27,7 +27,7 @@
 </template>
 
 <template name="mp4">
-  <video width="960" height="540" autoplay loop><source src="{{src}}" type="video/mp4">
+  <video width="{{width}}" height="{{height}}" autoplay loop><source src="{{base}}{{src}}.mp4" type="video/mp4">
   </video>
 </template>
 
