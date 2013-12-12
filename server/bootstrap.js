@@ -13,16 +13,16 @@ var screenList = [
   {
     "number": "1",
     "size": "large",
-    "type": "image",
-    "base": "http://hedgviz.s3.amazonaws.com/macro/",
-    "src": 'main.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'globe-spin'
   },
   {
     "number": "2",
     "size": "medium",
-    "type": "image",
-    "base": "http://hedgviz.s3.amazonaws.com/macro/",
-    "src": '1.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/",
+    "src": 'globe-scope'
   },
   {
     "number": "3",
@@ -34,16 +34,16 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "image",
+    "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/macro/",
-    "src": '2.jpg'
+    "src": 'chart'
   },
   {
     "number": "5",
     "size": "medium",
-    "type": "image",
+    "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/macro/",
-    "src": '3.jpg'
+    "src": 'chart-loop'
   },
   {
     "number": "6",
