@@ -13,16 +13,16 @@ var screenList = [
   {
     "number": "1",
     "size": "large",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/tickers/twtr/",
-    "src": '1'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/macro/",
+    "src": 'main.jpg'
   },
   {
     "number": "2",
     "size": "medium",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'charts'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/macro/",
+    "src": '1.jpg'
   },
   {
     "number": "3",
@@ -34,22 +34,22 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'numbers'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/macro/",
+    "src": '2.jpg'
   },
   {
     "number": "5",
     "size": "medium",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'globe-scope'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/macro/",
+    "src": '3.jpg'
   },
   {
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'TWTR - BEST IDEA - '
+    "src": 'MACRO MESSAGE'
   },
   {
     "number": "7",
