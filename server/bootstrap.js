@@ -13,16 +13,16 @@ var screenList = [
   {
     "number": "1",
     "size": "large",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/tickers/twtr/",
-    "src": '1'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/",
+    "src": 'main.jpg'
   },
   {
     "number": "2",
     "size": "medium",
-    "type": "mp4",
+    "type": "youtube",
     "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'charts'
+    "src": 'PxY5enF_BZc'
   },
   {
     "number": "3",
@@ -34,22 +34,22 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'numbers'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/guest/",
+    "src": 'dbroot2.jpg'
   },
   {
     "number": "5",
     "size": "medium",
-    "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'globe-scope'
+    "type": "image",
+    "base": "http://hedgviz.s3.amazonaws.com/guest/",
+    "src": 'dbroot.jpg'
   },
   {
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'TWTR - BEST IDEA - '
+    "src": 'HEDGEYE RISK MANAGEMENT'
   },
   {
     "number": "7",
