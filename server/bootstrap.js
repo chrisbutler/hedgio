@@ -21,7 +21,7 @@ var screenList = [
     "number": "2",
     "size": "medium",
     "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
     "src": 'globe-scope'
   },
   {
@@ -35,14 +35,14 @@ var screenList = [
     "number": "4",
     "size": "medium",
     "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/macro/",
-    "src": 'chart'
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'charts'
   },
   {
     "number": "5",
     "size": "medium",
     "type": "mp4",
-    "base": "http://hedgviz.s3.amazonaws.com/macro/",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
     "src": 'chart-loop'
   },
   {
