@@ -22,7 +22,7 @@ var screenList = [
     "size": "medium",
     "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'chart-loop'
+    "src": 'charts'
   },
   {
     "number": "3",
@@ -36,14 +36,14 @@ var screenList = [
     "size": "medium",
     "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'charts'
+    "src": 'numbers'
   },
   {
     "number": "5",
     "size": "medium",
     "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'heartbeat'
+    "src": 'globe-scope'
   },
   {
     "number": "6",
