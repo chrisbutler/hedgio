@@ -1,8 +1,4 @@
 if (Meteor.isClient) {
-  Template.screens.screen = function() {
-    return Screens.find({},{sort: {'number': 1}});
-  }
-
   Handlebars.registerHelper('withTemplate', function(name, context) {
     return Template[name](context);
   });

@@ -2,12 +2,45 @@
   <title>HEDGIO</title>
 </head>
 
-<body>
-  {{> screens}}
-</body>
+<template name="home">
+  <div class="container">
+    <div class="row">
+        <div class="entry-logo">
+            <a href="/"><img src="hedgio-logo.png" alt="logo"></a>
+        </div>
+      <div class="entry col-sm-6 col-sm-offset-6">
+        <h3>Select A Show</h3>
+        {{> showPicker this}}
+        <hr>
+        To set up shows, {{#link route='entrySignIn'}}sign in{{/link}}.
+      </div>
+    </div>
+  </div>
+</template>
 
-<template name="screens">
-  {{#each screen}}
+<template name="showPicker">
+  <div class="picker row">
+    <div class="form-group col-xs-9">
+      <select class="form-control">
+        {{#each this}}
+          <option value="{{value}}">{{name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="form-group col-xs-3">
+      <button type="submit" class="btn btn-block btn-default">GO</button>
+    </div>
+  </div>
+</template>
+
+<template name="1080p">
+  <div class="hdtv-1080">
+    {{yield}}
+  </div>
+</template>
+
+<template name="theShow">
+  {{#each this}}
     <div id="screen-{{number}}" class="screen {{size}}">
       <div class="embed">
         {{{withTemplate type this}}}
@@ -34,4 +67,8 @@
 <template name="youtube">
   <iframe width="480" height="270" src="//www.youtube.com/embed/{{src}}?playlist={{src}}&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen>
   </iframe>
+</template>
+
+<template name="m404">
+<h1>404: Not Found</h1>
 </template>

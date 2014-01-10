@@ -1,5 +1,12 @@
-/* CSS declarations go here */
-body {
+.entry-signup-cta {
+    display: none;
+}
+
+.picker {
+    margin-top: 30px;
+}
+
+.hdtv-1080 {
     margin: 0;
     width: 1920px;
     height: 1080px;

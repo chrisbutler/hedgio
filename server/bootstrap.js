@@ -6,6 +6,9 @@ if (Meteor.isServer) {
         Screens.insert(screens[screen]);
       }
     }
+    if(Shows.find().count() === 0){
+      Shows.insert({"name":"default","value":"default"});
+    }
   });
 }
 
@@ -13,16 +16,16 @@ var screenList = [
   {
     "number": "1",
     "size": "large",
-    "type": "image",
-    "base": "http://hedgviz.s3.amazonaws.com/",
-    "src": 'main.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'globe-spin'
   },
   {
     "number": "2",
     "size": "medium",
-    "type": "youtube",
+    "type": "mp4",
     "base": "http://hedgviz.s3.amazonaws.com/default/",
-    "src": 'PxY5enF_BZc'
+    "src": 'globe-scope'
   },
   {
     "number": "3",
@@ -34,22 +37,22 @@ var screenList = [
   {
     "number": "4",
     "size": "medium",
-    "type": "image",
-    "base": "http://hedgviz.s3.amazonaws.com/guest/",
-    "src": 'dbroot2.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'charts'
   },
   {
     "number": "5",
     "size": "medium",
-    "type": "image",
-    "base": "http://hedgviz.s3.amazonaws.com/guest/",
-    "src": 'dbroot.jpg'
+    "type": "mp4",
+    "base": "http://hedgviz.s3.amazonaws.com/default/",
+    "src": 'chart-loop'
   },
   {
     "number": "6",
     "size": "large",
     "type": "text",
-    "src": 'HEDGEYE RISK MANAGEMENT'
+    "src": 'MACRO MESSAGE'
   },
   {
     "number": "7",

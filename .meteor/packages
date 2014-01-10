@@ -7,4 +7,8 @@ autopublish
 insecure
 preserve-inputs
 standard-app-packages
-houston
+iron-router
+bootstrap-3
+accounts-ui
+accounts-password
+accounts-entry

@@ -1,5 +1,9 @@
 {
   "packages": {
-    "houston": {}
+    "iron-router": {
+      "version": "0.6.1"
+    },
+    "accounts-entry": {},
+    "bootstrap-3": {}
   }
 }
