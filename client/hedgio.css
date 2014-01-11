@@ -6,6 +6,11 @@
     margin-top: 30px;
 }
 
+.admin-link {
+    text-transform: uppercase;
+    color: #999999;
+}
+
 .hdtv-1080 {
     margin: 0;
     width: 1920px;

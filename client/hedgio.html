@@ -11,7 +11,13 @@
       <div class="entry col-sm-6 col-sm-offset-6">
         {{> showPicker this}}
         <hr>
-        To set up shows, {{#link route='entrySignIn'}}sign in{{/link}}.
+        <div class="row">
+          <div class="col-sm-9">
+            To set up shows, {{#link route='entrySignIn'}}sign in{{/link}}.
+          </div>
+          <div class="col-sm-3">
+            {{#link route='houston_home' class='admin-link pull-right'}}Admin{{/link}}
+          </div>
       </div>
     </div>
   </div>
@@ -100,6 +106,6 @@
   </iframe>
 </template>
 
-<template name="m404">
-<h1>404: Not Found</h1>
+<template name="404">
+  <h1>404: Not Found</h1>
 </template>
