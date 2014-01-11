@@ -32,7 +32,7 @@ Template.showPicker.events({
     Router.go('theShow');
   },
   'change .show-picker': function (event) {
-    Session.set('goClass', 'btn-success');
+    Session.set('goClass', 'btn-primary');
     Session.set('showName', event.target.selectedOptions[0].text);
   }
 });
