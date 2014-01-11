@@ -113,12 +113,12 @@ var showList = [
     "text": "retail"
   },
   {
-    "name": "ticker: twtr",
-    "main": "jpg",
+    "name": "tickers/twtr",
+    "main": "mp4",
     "1": "mp4",
     "2": "mp4",
     "3": "mp4",
-    "text": "ticker: twtr"
+    "text": "eye on $twtr"
   }
 ];
 

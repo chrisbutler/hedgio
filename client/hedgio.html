@@ -9,7 +9,6 @@
             <a href="/"><img src="hedgio-logo.png" alt="logo"></a>
         </div>
       <div class="entry col-sm-6 col-sm-offset-6">
-        <h3>Select A Show</h3>
         {{> showPicker this}}
         <hr>
         To set up shows, {{#link route='entrySignIn'}}sign in{{/link}}.
@@ -22,6 +21,7 @@
   <div class="picker row">
     <div class="form-group col-xs-9">
       <select class="show-picker form-control">
+        <option selected="selected" disabled="disabled">Select a show...</option>
         {{#each this}}
           <option value="{{value}}">{{name}}</option>
         {{/each}}

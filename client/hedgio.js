@@ -11,7 +11,8 @@ Handlebars.registerHelper('showName', function(name, context) {
 });
 
 Handlebars.registerHelper('marquee', function(name, context) {
-  return Session.get('showName') || 'www.hedgeye.com';
+  var s = Shows.findOne({name: Session.get('showName')});
+  return (s && s.text) || 'www.hedgeye.com';
 });
 
 Template.mp4.width = function() {
