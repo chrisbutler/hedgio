@@ -21,14 +21,14 @@
 <template name="showPicker">
   <div class="picker row">
     <div class="form-group col-xs-9">
-      <select class="form-control">
+      <select class="show-picker form-control">
         {{#each this}}
           <option value="{{value}}">{{name}}</option>
         {{/each}}
       </select>
     </div>
     <div class="form-group col-xs-3">
-      <button type="submit" class="btn btn-block btn-default">GO</button>
+      <button class="go btn btn-block btn-default {{goClass}}">GO</button>
     </div>
   </div>
 </template>
@@ -41,26 +41,57 @@
 
 <template name="theShow">
   {{#each this}}
-    <div id="screen-{{number}}" class="screen {{size}}">
-      <div class="embed">
-        {{{withTemplate type this}}}
+    {{#if thirdScreen}}
+      <div id="screen-3" class="screen medium">
+        <div class="embed">
+          <img src="http://hedgviz.s3.amazonaws.com/HE_logo.jpg">
+        </div>
       </div>
-    </div>
+    {{else}}
+      <div id="screen-{{number}}" class="screen {{size}}">
+        <div class="embed">
+          {{{withTemplate screenType this}}}
+        </div>
+      </div>
+    {{/if}}
   {{/each}}
+  {{> multiScreen}}
 </template>
 
-<template name="image">
-  <img src="{{base}}{{src}}" />
+<template name="multiScreen">
+  <div id="screen-7" class="screen large">
+    <div class="embed">
+      <video class="autoplayable" width="960" height="540" autoplay="" loop="">
+        <source src="http://hedgviz.s3.amazonaws.com/videos/he-ns-loop-960.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+ </template> 
+
+<template name="jpg">
+  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.jpg" />
+</template>
+
+<template name="png">
+  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.png" />
 </template>
 
 <template name="text">
   <div class="ticker">
-    <marquee behavior="alternate" direction="left"><span>{{src}}</span> - HEDGEYE | <span>{{src}}</span> - HEDGEYE | <span>{{src}}</span> - HEDGEYE | <span>{{src}}</span> - HEDGEYE | <span>{{src}}</span> - HEDGEYE | </marquee>
+    <marquee behavior="alternate" direction="left">
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
+      <span>{{marquee}}</span> | HEDGEYE | 
   </div>
 </template>
 
 <template name="mp4">
-  <video width="{{width}}" height="{{height}}" autoplay loop><source src="{{base}}{{src}}.mp4" type="video/mp4">
+  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.{{type}}" type="video/mp4">
   </video>
 </template>
 

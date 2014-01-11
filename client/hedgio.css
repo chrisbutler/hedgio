@@ -45,5 +45,6 @@
 }
 
 .ticker span {
+    text-transform: uppercase;
     font-weight: 300;
 }

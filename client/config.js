@@ -1,5 +1,7 @@
 Meteor.startup(function() {
   
+  Session.setDefault('showName', 'default');
+
   Accounts.ui.config({
     passwordSignupFields: 'EMAIL_ONLY'
   });
