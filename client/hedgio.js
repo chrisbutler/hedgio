@@ -29,13 +29,19 @@ Template.mp4.height = function() {
 
 Template.showPicker.events({
   'click .go': function (event) {
-    Router.go('theShow');
+    if (Session.get('goClass'))
+      Router.go('theShow');
   },
   'change .show-picker': function (event) {
     Session.set('goClass', 'btn-primary');
     Session.set('showName', event.target.selectedOptions[0].text);
   }
 });
+
+Template.showPicker.rendered = function() {
+  if (Session.get('goClass'))
+    $(this.find('.show-picker')).val(Session.get('showName'))
+}
 
 Template.theShow.thirdScreen = function() {
   return this.number == 3;
