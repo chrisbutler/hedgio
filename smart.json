@@ -5,6 +5,7 @@
     },
     "accounts-entry": {},
     "bootstrap-3": {},
-    "scss": {}
+    "scss": {},
+    "font-awesome": {}
   }
 }

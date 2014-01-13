@@ -1,0 +1,18 @@
+<template name="theShow">
+  {{#each this}}
+    {{#if thirdScreen}}
+      <div id="screen-3" class="screen medium">
+        <div class="embed">
+          <img src="http://hedgviz.s3.amazonaws.com/HE_logo.jpg">
+        </div>
+      </div>
+    {{else}}
+      <div id="screen-{{number}}" class="screen {{size}}">
+        <div class="embed">
+          {{{withTemplate screenType this}}}
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+  {{> multiScreen}}
+</template>

@@ -62,22 +62,30 @@
   <div class="screens-container">
     <div class="row">
       <div class="main-screen col-xs-9">
-        <img class="img-responsive" src="/HE_logo.png">
+        <div class="embed">
+          {{{withTemplate this.main 'main'}}}
+        </div>
       </div>
       <div class="side-screens col-xs-3">
         <div class="row">
           <div class="screen-one col-xs-12">
-              <img class="img-responsive" src="/HE_logo.png">
+            <div class="embed">
+              {{{withTemplate this.one '1'}}}
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="screen-two col-xs-12">
-              <img class="img-responsive" src="/HE_logo.png">
+            <div class="embed">
+              {{{withTemplate this.two '2'}}}
+            </div>
           </div>
         </div>
         <div class="row">
           <div class="screen-three col-xs-12">
-              <img class="img-responsive" src="/HE_logo.png">
+            <div class="embed">
+              {{{withTemplate this.three '3'}}}
+            </div>
           </div>
         </div>
       </div>
@@ -86,13 +94,35 @@
 </template>
 
 <template name="dashboard">
-  <h4>Shows</h4>
-  {{> showList}}
+  <div class="page-header">
+    <h1>Shows</h1>
+  </div>
+  {{#each this}}
+    {{> showGridItem}}
+  {{/each}}
 </template>
 
 <template name="edit">
-  <h4>Editing {{name}}</h4>
-  {{> screens}}
+  <div class="page-header">
+    <h1>Editing {{name}}</h1>
+  </div>
+  {{> screens this}}
+</template>
+
+<template name="showGridItem">
+  <div class="show-item-holder col-sm-4">
+    <div class="show-item">
+      {{> screens}}
+      <div class="show-item-info row">
+        <div class="col-xs-9">
+          <h3>{{name}}</h3>
+        </div>
+        <div class="col-xs-3">
+          {{#link route='edit' class='btn btn-sm btn-block btn-primary'}}Edit{{/link}}
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <template name="showList">
@@ -122,70 +152,4 @@
       {{/each}}
     </tbody>
   </table>
-</template>
-
-
-<template name="theShow">
-  {{#each this}}
-    {{#if thirdScreen}}
-      <div id="screen-3" class="screen medium">
-        <div class="embed">
-          <img src="http://hedgviz.s3.amazonaws.com/HE_logo.jpg">
-        </div>
-      </div>
-    {{else}}
-      <div id="screen-{{number}}" class="screen {{size}}">
-        <div class="embed">
-          {{{withTemplate screenType this}}}
-        </div>
-      </div>
-    {{/if}}
-  {{/each}}
-  {{> multiScreen}}
-</template>
-
-<template name="multiScreen">
-  <div id="screen-7" class="screen large">
-    <div class="embed">
-      <video class="autoplayable" width="960" height="540" autoplay="" loop="">
-        <source src="http://hedgviz.s3.amazonaws.com/videos/he-ns-loop-960.mp4" type="video/mp4">
-      </video>
-    </div>
-  </div>
- </template> 
-
-<template name="jpg">
-  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.jpg" />
-</template>
-
-<template name="png">
-  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.png" />
-</template>
-
-<template name="text">
-  <div class="ticker">
-    <marquee behavior="alternate" direction="left">
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-  </div>
-</template>
-
-<template name="mp4">
-  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.{{type}}" type="video/mp4">
-  </video>
-</template>
-
-<template name="youtube">
-  <iframe width="480" height="270" src="//www.youtube.com/embed/{{src}}?playlist={{src}}&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen>
-  </iframe>
-</template>
-
-<template name="404">
-  <h1>404: Not Found</h1>
 </template>

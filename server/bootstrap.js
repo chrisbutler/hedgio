@@ -57,14 +57,6 @@ var showList = [
     "text": "gold"
   },
   {
-    "name": "guest",
-    "main": "jpg",
-    "one": "mp4",
-    "two": "mp4",
-    "three": "mp4",
-    "text": "guest"
-  },
-  {
     "name": "healthcare",
     "main": "jpg",
     "one": "mp4",
@@ -89,14 +81,6 @@ var showList = [
     "text": "industrials"
   },
   {
-    "name": "macro",
-    "main": "jpg",
-    "one": "jpg",
-    "two": "jpg",
-    "three": "jpg",
-    "text": "macro"
-  },
-  {
     "name": "restaurants",
     "main": "jpg",
     "one": "mp4",
@@ -111,14 +95,6 @@ var showList = [
     "two": "jpg",
     "three": "jpg",
     "text": "retail"
-  },
-  {
-    "name": "tickers/twtr",
-    "main": "mp4",
-    "one": "mp4",
-    "two": "mp4",
-    "three": "mp4",
-    "text": "eye on $twtr"
   }
 ];
 

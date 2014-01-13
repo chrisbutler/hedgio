@@ -1,25 +1,25 @@
 .hdtv-1080 {
-    margin: 0;
-    width: 1920px;
-    height: 1080px;
+  margin: 0;
+  width: 1920px;
+  height: 1080px;
 }
 
 .screen {
-    float: left;
-    position: relative;
-    overflow: hidden;
+  float: left;
+  position: relative;
+  overflow: hidden;
   &.large {
-      width: 960px;
-      height: 540px;
-      background: #000;
+    width: 960px;
+    height: 540px;
+    background: #000;
   }
   &.medium {
-      width: 480px;
-      height: 270px;
+    width: 480px;
+    height: 270px;
   }
   &.small {
-      width: 240px;
-      height: 135px;
+    width: 240px;
+    height: 135px;
   }
 }
 

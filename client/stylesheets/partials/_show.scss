@@ -1,0 +1,40 @@
+.side-screens .row {
+  margin-bottom: 11.5px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.show-item-holder {
+  padding: 0 7.5px;
+}
+.show-item {
+  padding: 7.5px;
+  margin: 7.5px 0;
+  border: 1px solid #CCCCCC;
+  .show-item-info {
+    margin-top: 15px;
+  }
+  .screens-container {
+
+  }
+  h3 {
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+  }
+}
+
+.video-placeholder {
+  background: $black;
+  text-align: center;
+  i {
+    color: white;
+  }
+  .main-screen & {
+    i {
+      line-height: 100%;
+      font-size:24px;
+    }
+  }
+}

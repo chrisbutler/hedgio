@@ -1,4 +1,9 @@
 Handlebars.registerHelper('withTemplate', function(name, context) {
+  if (this.name) {
+    var context = {'name':this.name,'src':context};
+    if (name == 'mp4')
+      name += 'Placeholder';
+  }
   return Template[name](context);
 });
 
@@ -7,6 +12,8 @@ Handlebars.registerHelper('goClass', function(name, context) {
 });
 
 Handlebars.registerHelper('showName', function(name, context) {
+  if (this.name)
+    return this.name;
   return Session.get('showName') || 'default';
 });
 
@@ -37,6 +44,10 @@ Template.showPicker.events({
     Session.set('showName', event.target.selectedOptions[0].text);
   }
 });
+
+Template.screens.rendered = function() {
+  
+}
 
 Template.showPicker.rendered = function() {
   if (Session.get('goClass'))
