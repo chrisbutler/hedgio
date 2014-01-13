@@ -1,0 +1,24 @@
+.dashboard-wrapper {
+  padding-top: 75px;
+}
+
+.screen-holder {
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.screen-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.screen-container {
+  .screen-content {
+    border: 1px solid #CCCCCC;
+  }
+}
