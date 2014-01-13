@@ -1,5 +1,5 @@
 .dashboard-wrapper {
-  padding-top: 75px;
+  padding-top: 50px;
 }
 
 .side-screens {
@@ -32,6 +32,16 @@
   right: 0;
   .nav {
     float: right;
+    &.nav-pills li {
+      a {
+        border-radius: 0;
+        cursor: pointer;
+      }
+      &.active a {
+        opacity: .5;
+        cursor: default;
+      }
+    }
   }
   .background {
     background: $black;

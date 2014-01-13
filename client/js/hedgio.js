@@ -1,7 +1,7 @@
 Handlebars.registerHelper('withTemplate', function(name, context) {
   if (this.name)
     var context = {'name':this.name,'src':context};
-  if ((name == 'mp4' && context.src != 'main') && Router.current().route.name != 'edit')
+  if ((name == 'mp4' && context.src != 'main') && Router.current().route.name != 'edit' &&  Router.current().route.name != 'theShow')
     name += 'Placeholder';
   return Template[name](context);
 });

@@ -100,19 +100,19 @@ var showList = [
 
 var screenList = [
   {
-    "number": "one",
+    "number": "1",
     "size": "large",
     "type": "mp4",
     "src": "main",
   },
   {
-    "number": "two",
+    "number": "2",
     "size": "medium",
     "type": "mp4",
     "src": "one"
   },
   {
-    "number": "three",
+    "number": "3",
     "size": "medium",
     "type": "jpg",
     "src": "HE_logo"

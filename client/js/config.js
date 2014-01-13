@@ -21,3 +21,5 @@ Meteor.startup(function() {
 // bootstrap pill buttons to select type
 // image, mp4, url(?)
 // 63632374
+// hardcode screen layout
+// array of screens?
