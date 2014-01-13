@@ -19,124 +19,124 @@ var showList = [
   {
     "name": "default",
     "main": "mp4",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "www.hedgeye.com"
   },
   {
     "name": "financials",
     "main": "jpg",
-    "1": "jpg",
-    "2": "jpg",
-    "3": "jpg",
+    "one": "jpg",
+    "two": "jpg",
+    "three": "jpg",
     "text": "financials"
   },
   {
     "name": "macro",
     "main": "mp4",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "macro"
   },
   {
     "name": "gaming",
     "main": "jpg",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "gaming"
   },
   {
     "name": "gold",
     "main": "mp4",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "gold"
   },
   {
     "name": "guest",
     "main": "jpg",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "guest"
   },
   {
     "name": "healthcare",
     "main": "jpg",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "healthcare"
   },
   {
     "name": "hedgetohedge",
     "main": "jpg",
-    "1": "jpg",
-    "2": "jpg",
-    "3": "jpg",
+    "one": "jpg",
+    "two": "jpg",
+    "three": "jpg",
     "text": "Hedge-to-Hedge"
   },
   {
     "name": "industrials",
     "main": "jpg",
-    "1": "jpg",
-    "2": "jpg",
-    "3": "jpg",
+    "one": "jpg",
+    "two": "jpg",
+    "three": "jpg",
     "text": "industrials"
   },
   {
     "name": "macro",
     "main": "jpg",
-    "1": "jpg",
-    "2": "jpg",
-    "3": "jpg",
+    "one": "jpg",
+    "two": "jpg",
+    "three": "jpg",
     "text": "macro"
   },
   {
     "name": "restaurants",
     "main": "jpg",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "restaurants"
   },
   {
     "name": "retail",
     "main": "jpg",
-    "1": "jpg",
-    "2": "jpg",
-    "3": "jpg",
+    "one": "jpg",
+    "two": "jpg",
+    "three": "jpg",
     "text": "retail"
   },
   {
     "name": "tickers/twtr",
     "main": "mp4",
-    "1": "mp4",
-    "2": "mp4",
-    "3": "mp4",
+    "one": "mp4",
+    "two": "mp4",
+    "three": "mp4",
     "text": "eye on $twtr"
   }
 ];
 
 var screenList = [
   {
-    "number": "1",
+    "number": "one",
     "size": "large",
     "type": "mp4",
     "src": "main",
   },
   {
-    "number": "2",
+    "number": "two",
     "size": "medium",
     "type": "mp4",
-    "src": "1"
+    "src": "one"
   },
   {
-    "number": "3",
+    "number": "three",
     "size": "medium",
     "type": "jpg",
     "src": "HE_logo"
@@ -145,13 +145,13 @@ var screenList = [
     "number": "4",
     "size": "medium",
     "type": "mp4",
-    "src": "2"
+    "src": "two"
   },
   {
     "number": "5",
     "size": "medium",
     "type": "mp4",
-    "src": "3"
+    "src": "three"
   },
   {
     "number": "6",

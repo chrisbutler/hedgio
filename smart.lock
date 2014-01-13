@@ -11,8 +11,8 @@
       "bootstrap-3": {
         "version": "0.3.7"
       },
-      "houston": {
-        "version": "1.0.0"
+      "scss": {
+        "version": "0.7.0"
       }
     },
     "packages": {
@@ -31,20 +31,10 @@
         "tag": "v0.3.7",
         "commit": "5dd0d142c870647b910be80bc777b96f0dd45e5e"
       },
-      "houston": {
-        "git": "https://github.com/gterrono/meteor-admin-ui.git",
-        "tag": "v1.0.0",
-        "commit": "e98660af09cb3e4e90848abfe943a06e7068cccc"
-      },
-      "paginated-subscription": {
-        "git": "https://github.com/tmeasday/meteor-paginated-subscription.git",
-        "tag": "v0.1.2",
-        "commit": "35e0c6112df2b4cfeb60b559276a93cac5ee2dd6"
-      },
-      "spin": {
-        "git": "https://github.com/SachaG/meteor-spin.git",
-        "tag": "v0.2.2",
-        "commit": "3f655f0016228e4195acc784c45d3e3a247dc39f"
+      "scss": {
+        "git": "https://github.com/fourseven/meteor-scss.git",
+        "tag": "v0.7.0",
+        "commit": "39f60d58c2b890bdd897ef52188644f3093fc2ac"
       }
     }
   }
