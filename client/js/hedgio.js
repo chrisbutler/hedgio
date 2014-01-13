@@ -36,7 +36,7 @@ Template.mp4.height = function() {
 Template.showPicker.events({
   'click .go': function (event) {
     if (Session.get('goClass'))
-      Router.go('theShow');
+      Router.go('theShow', {name:Session.get('showName')});
   },
   'change .show-picker': function (event) {
     Session.set('goClass', 'btn-primary');
