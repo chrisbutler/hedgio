@@ -1,9 +1,8 @@
 Handlebars.registerHelper('withTemplate', function(name, context) {
-  if (this.name) {
+  if (this.name)
     var context = {'name':this.name,'src':context};
-    if (name == 'mp4')
-      name += 'Placeholder';
-  }
+  if ((name == 'mp4' && context.src != 'main') && Router.current().route.name != 'edit')
+    name += 'Placeholder';
   return Template[name](context);
 });
 
@@ -48,6 +47,12 @@ Template.showPicker.events({
 Template.screens.rendered = function() {
   
 }
+
+Template.screens.helpers({
+  editing: function() {
+    return Router.current().route.name == 'edit';
+  }
+});
 
 Template.showPicker.rendered = function() {
   if (Session.get('goClass'))

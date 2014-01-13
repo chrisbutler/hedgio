@@ -1,0 +1,46 @@
+<template name="screens">
+  <div class="screens-container">
+    <div class="row">
+      <div class="main-screen col-xs-9">
+        <div class="screen-holder">
+          {{#if editing}}{{> typeSelector}}{{/if}}
+          <div class="screen-content embed">
+            {{{withTemplate this.main 'main'}}}
+          </div>
+        </div>
+      </div>
+      <div class="side-screens col-xs-3">
+        <div class="row">
+          <div class="screen-one col-xs-12">
+            <div class="screen-holder">
+              {{#if editing}}{{> typeSelector}}{{/if}}
+              <div class="screen-content embed">
+                {{{withTemplate this.one '1'}}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="screen-two col-xs-12">
+            <div class="screen-holder">
+              {{#if editing}}{{> typeSelector}}{{/if}}
+              <div class="screen-content embed">
+                {{{withTemplate this.two '2'}}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="screen-three col-xs-12">
+            <div class="screen-holder">
+              {{#if editing}}{{> typeSelector}}{{/if}}
+              <div class="screen-content embed">
+                {{{withTemplate this.three '3'}}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

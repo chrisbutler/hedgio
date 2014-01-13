@@ -1,0 +1,16 @@
+<template name="1080p">
+  <div class="hdtv-1080">
+    {{yield}}
+  </div>
+</template>
+
+<template name="layout">
+  {{> navigation}}
+  <div class="dashboard-wrapper">
+    <div class="container">
+      <div class="row">
+        {{yield}}
+      </div>
+    </div>
+  </div>
+</template>
