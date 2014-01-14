@@ -2,43 +2,57 @@
   <div class="screens-container">
     <div class="row">
       <div class="main-screen col-xs-9">
-        <div class="screen-holder">
-          {{#if editing}}{{> typeSelector}}{{/if}}
-          <div class="screen-content embed">
-            {{{withTemplate this.main 'main'}}}
+        {{#isolate}}
+          <div class="screen-holder">
+            {{#if editing}}
+              {{> typeSelector}}
+              <div class="screen-content embed">
+                {{{urlTemplate 'main'}}}
+              </div>
+            {{else}}
+              <div class="screen-content embed">
+                {{{withTemplate this.main 'main'}}}
+              </div>
+            {{/if}}
           </div>
-        </div>
+        {{/isolate}}
       </div>
       <div class="side-screens col-xs-3">
         <div class="row">
-          <div class="screen-one col-xs-12">
-            <div class="screen-holder">
-              {{#if editing}}{{> typeSelector}}{{/if}}
-              <div class="screen-content embed">
-                {{{withTemplate this.one 'one'}}}
+          {{#isolate}}
+            <div class="screen-one col-xs-12">
+              <div class="screen-holder">
+                {{#if editing}}{{> typeSelector}}{{/if}}
+                <div class="screen-content embed">
+                  {{{withTemplate this.one 'one'}}}
+                </div>
               </div>
             </div>
-          </div>
+          {{/isolate}}
         </div>
         <div class="row">
-          <div class="screen-two col-xs-12">
-            <div class="screen-holder">
-              {{#if editing}}{{> typeSelector}}{{/if}}
-              <div class="screen-content embed">
-                {{{withTemplate this.two 'two'}}}
+          {{#isolate}}
+            <div class="screen-two col-xs-12">
+              <div class="screen-holder">
+                {{#if editing}}{{> typeSelector}}{{/if}}
+                <div class="screen-content embed">
+                  {{{withTemplate this.two 'two'}}}
+                </div>
               </div>
             </div>
-          </div>
+          {{/isolate}}
         </div>
         <div class="row">
-          <div class="screen-three col-xs-12">
-            <div class="screen-holder">
-              {{#if editing}}{{> typeSelector}}{{/if}}
-              <div class="screen-content embed">
-                {{{withTemplate this.three 'three'}}}
+          {{#isolate}}
+            <div class="screen-three col-xs-12">
+              <div class="screen-holder">
+                {{#if editing}}{{> typeSelector}}{{/if}}
+                <div class="screen-content embed">
+                  {{{withTemplate this.three 'three'}}}
+                </div>
               </div>
             </div>
-          </div>
+          {{/isolate}}
         </div>
       </div>
     </div>

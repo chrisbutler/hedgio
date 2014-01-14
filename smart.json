@@ -6,6 +6,10 @@
     "accounts-entry": {},
     "bootstrap-3": {},
     "scss": {},
-    "font-awesome": {}
+    "font-awesome": {},
+    "filepicker": {},
+    "bootboxjs": {
+      "git": "git@github.com:chrisbutler/meteor-bootboxjs.git"
+    }
   }
 }

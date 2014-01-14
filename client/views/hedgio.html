@@ -27,10 +27,9 @@
   <div class="type-selector-container">
     <div class="background"></div>
     <ul class="nav nav-pills">
-      <li><a><i class="fa fa-camera"></i></a></li>
-      <li class="active"><a><i class="fa fa-film"></i></a></li>
-      <li><a><i class="fa fa-youtube-play"></i></a></li>
-      <li><a><i class="fa fa-ban"></i></a></li>
+      <li><a class="picker-button"><i class="fa fa-camera"></i></a></li>
+      <li><a class="yt-button"><i class="fa fa-youtube-play"></i></a></li>
+      <li><a class="remove-img-button"><i class="fa fa-ban"></i></a></li>
     </ul>
   </div>
 </template>
@@ -49,6 +48,14 @@
     <h1>Editing {{name}}</h1>
   </div>
   {{> screens this}}
+  <div class="row text-row">
+    <div class="col-sm-9">
+      <input type="text" class="form-control" id="ticker-text" value="{{text}}" placeholder="Enter ticker text here...">
+    </div>
+    <div class="col-sm-3 side-screens">
+      <button class="btn btn-primary btn-block">Save Show</button>
+    </div>
+  </div> 
 </template>
 
 <template name="delete">

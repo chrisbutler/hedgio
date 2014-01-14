@@ -1,4 +1,7 @@
 Meteor.startup(function() {
+  Meteor.setTimeout(function(){
+    filepicker.setKey("AQXb7iOxFTKu0sLBAd2W5z");
+  },1000);
   
   Session.setDefault('showName', 'default');
 
@@ -23,3 +26,4 @@ Meteor.startup(function() {
 // 63632374
 // hardcode screen layout
 // array of screens?
+// server sessions for remote control

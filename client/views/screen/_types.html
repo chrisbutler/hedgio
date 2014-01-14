@@ -25,6 +25,11 @@
   </video>
 </template>
 
+<template name="mp4URL">
+  <video class="autoplayable" width="100%" loop><source src="{{this}}" type="video/mp4">
+  </video>
+</template>
+
 <template name="mp4Placeholder">
   <div class="video-placeholder screen-holder">
     <p>{{showName}}/{{src}}.mp4</p>

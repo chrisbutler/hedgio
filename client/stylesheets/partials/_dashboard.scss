@@ -11,6 +11,11 @@
     }
   }
 }
+
+.text-row {
+  margin-top: 30px;
+}
+
 .screen-holder {
   height: 0;
   padding-bottom: 56.25%;
@@ -38,8 +43,8 @@
         cursor: pointer;
       }
       &.active a {
-        opacity: .5;
-        cursor: default;
+        //opacity: .5;
+        //cursor: default;
       }
     }
   }

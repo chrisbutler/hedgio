@@ -6,6 +6,14 @@ Handlebars.registerHelper('withTemplate', function(name, context) {
   return Template[name](context);
 });
 
+Handlebars.registerHelper('urlTemplate', function(name) {
+  var n = Session.get(name);
+  if (n == '')
+    return '';
+  var t = n.substring(n.length-3, n.length);
+  return Template[t + 'URL'](n);
+});
+
 Handlebars.registerHelper('goClass', function(name, context) {
   return Session.get('goClass');
 });
@@ -47,6 +55,28 @@ Template.showPicker.events({
 Template.screens.rendered = function() {
   
 }
+
+Template.edit.events({
+  'click .picker-button': function (event) {
+    filepicker.pickAndStore({},{},function(InkBlobs){
+      console.log(JSON.stringify(InkBlobs));
+    });
+  },
+  'click .yt-button': function (event) {
+    bootbox.prompt("Enter YouTube URL:", function(result) {                
+      if (result === null) {                                             
+        console.log("Nevermind...");                              
+      } else {
+        console.log(result.replace(/.*v=(.*)/,"$1"));                          
+      }
+    });
+  },
+  'click .remove-img-button': function (event) {
+    Session.set('main', '');
+  } 
+});
+
+
 
 Template.screens.helpers({
   editing: function() {
