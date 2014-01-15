@@ -1,12 +1,40 @@
 <template name="screens">
   <div class="page-header">
+    {{#link route='newScreen' class='pull-right btn btn-large btn-success'}}Add Screen{{/link}}
     <h1>Screens</h1>
   </div>
+  {{> sectorNav}}
+  <hr>
   {{#each this}}
     <div class="show-item-holder col-sm-3">
-      {{code}}: {{name}}
+      <div class="show-item">
+        {{{withTemplate type}}}
+        <div class="show-item-info row">
+          <div class="col-xs-12">
+            <h3>{{code}}</h3>
+            <h6>{{name}}</h6>
+          </div>
+        </div>
+      </div>
     </div>
   {{/each}}
+</template>
+
+<template name="screenPicker">
+  <div class="bar-holder">
+    <div class="row">
+      <div class="form-group col-xs-12">
+        {{#constant}}
+          <select id="{{monitor}}" class="screen-picker form-control input-sm">
+            <option selected="selected" disabled>Select a new screen...</option>
+            {{#each screens}}
+              <option value="{{code}}">{{code}}: {{name}}</option>
+            {{/each}}
+          </select>
+        {{/constant}}
+      </div>
+    </div>
+  </div>
 </template>
 
 <template name="screensWidget">
@@ -16,6 +44,9 @@
         <div class="preview-screen">
           {{{screenTemplate 'main'}}}
         </div>
+        {{#if editing}}
+          {{> screenPicker main}}
+        {{/if}}
       </div>
       <div class="side-screens col-xs-3">
         <div class="row">
@@ -23,6 +54,9 @@
             <div class="preview-screen">
               {{{screenTemplate 'one' editing}}}
             </div>
+            {{#if editing}}
+              {{> screenPicker one}}
+            {{/if}}
           </div>
         </div>
         <div class="row">
@@ -30,6 +64,9 @@
             <div class="preview-screen">
               {{{screenTemplate 'two' editing}}}
             </div>
+            {{#if editing}}
+              {{> screenPicker two}}
+            {{/if}}
           </div>
         </div>
         <div class="row">
@@ -37,6 +74,9 @@
             <div class="preview-screen">
               {{{screenTemplate 'three' editing}}}
             </div>
+            {{#if editing}}
+              {{> screenPicker three}}
+            {{/if}}
           </div>
         </div>
       </div>

@@ -14,3 +14,9 @@
 .navbar-brand.active {
   color: white;
 }
+
+.preview-screen, .embed {
+  img, video {
+    display: block;
+  }
+}
