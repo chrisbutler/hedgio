@@ -36,7 +36,8 @@ Template.typeSelector.events({
       if (result === null) {                                             
         console.log("Nevermind...");                              
       } else {
-        console.log(result.replace(/.*v=(.*)/,"$1"));                          
+        Session.set('selectedType', 'youtube');
+        Session.set('selectedSrc', result.replace(/.*v=(.*)/,"$1"));
       }
     });
   }
