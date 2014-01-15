@@ -1,18 +1,3 @@
-Template.showPicker.events({
-  'click .go': function (event) {
-    if (Session.get('goClass'))
-      Router.go('theShow', {name:Session.get('showName')});
-  },
-  'change .show-picker': function (event) {
-    Session.set('goClass', 'btn-primary');
-    Session.set('showName', event.target.selectedOptions[0].text);
-  }
-});
-
-Template.screens.rendered = function() {
-  
-}
-
 Template.edit.events({
   'click .picker-button': function (event) {
     filepicker.pickAndStore({},{},function(InkBlobs){
@@ -32,6 +17,12 @@ Template.edit.events({
     Session.set('main', '');
   } 
 });
+
+
+Template.screens.rendered = function() {
+  
+}
+
 
 
 

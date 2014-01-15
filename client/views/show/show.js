@@ -1,3 +1,14 @@
+Template.showPicker.events({
+  'click .go': function (event) {
+    if (Session.get('goClass'))
+      Router.go('theShow', {name:Session.get('showName')});
+  },
+  'change .show-picker': function (event) {
+    Session.set('goClass', 'btn-primary');
+    Session.set('showName', event.target.selectedOptions[0].text);
+  }
+});
+
 Template.showPicker.helpers({
   shows: function() {
     return Shows.find();
