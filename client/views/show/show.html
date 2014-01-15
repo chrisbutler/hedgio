@@ -1,3 +1,10 @@
+<template name="shows">
+  <div class="page-header">
+    <h1>Shows</h1>
+  </div>
+  {{> showList}}
+</template>
+
 <template name="showPicker">
   <div class="picker row">
     <div class="form-group col-xs-9">
@@ -20,7 +27,7 @@
   <div class="show-item-holder col-sm-4">
     {{#link route='delete' class='delete-button'}}<i class="fa fa-ban"></i>{{/link}}
     <div class="show-item">
-      {{> screens}}
+      {{> screensWidget}}
       <div class="show-item-info row">
         <div class="col-xs-10">
           <h3>{{name}}</h3>
@@ -50,11 +57,11 @@
       {{#each this}}
         <tr>
           <td>{{name}}</td>
-          <td>{{main}}</td>
-          <td>{{one}}</td>
-          <td>{{two}}</td>
-          <td>{{three}}</td>
-          <td>{{text}}</td>
+          <td>{{screens.main}}</td>
+          <td>{{screens.one}}</td>
+          <td>{{screens.two}}</td>
+          <td>{{screens.three}}</td>
+          <td>{{ticker}}</td>
           <td>{{#link route='edit' class='btn btn-sm btn-primary'}}Edit{{/link}}</td>
         </tr>
       {{/each}}

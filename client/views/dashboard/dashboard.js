@@ -17,18 +17,3 @@ Template.edit.events({
     Session.set('main', '');
   } 
 });
-
-
-Template.screens.rendered = function() {
-  
-}
-
-
-
-
-Template.screens.helpers({
-  editing: function() {
-    return Router.current().route.name == 'edit';
-  }
-});
-

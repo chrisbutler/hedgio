@@ -1,58 +1,43 @@
 <template name="screens">
+  <div class="page-header">
+    <h1>Screens</h1>
+  </div>
+  {{#each this}}
+    <div class="show-item-holder col-sm-3">
+      {{code}}: {{name}}
+    </div>
+  {{/each}}
+</template>
+
+<template name="screensWidget">
   <div class="screens-container">
     <div class="row">
-      <div class="main-screen col-xs-9">
-        {{#isolate}}
-          <div class="screen-holder">
-            {{#if editing}}
-              {{> typeSelector}}
-              <div class="screen-content embed">
-                {{{urlTemplate 'main'}}}
-              </div>
-            {{else}}
-              <div class="screen-content embed">
-                {{{withTemplate 'mp4' 'main'}}}
-              </div>
-            {{/if}}
-          </div>
-        {{/isolate}}
+      <div class="screen-main col-xs-9">
+        <div class="preview-screen">
+          {{{screenTemplate 'main'}}}
+        </div>
       </div>
       <div class="side-screens col-xs-3">
         <div class="row">
-          {{#isolate}}
-            <div class="screen-one col-xs-12">
-              <div class="screen-holder">
-                {{#if editing}}{{> typeSelector}}{{/if}}
-                <div class="screen-content embed">
-                  {{{withTemplate 'mp4' 'one'}}}
-                </div>
-              </div>
+          <div class="screen-one col-xs-12">
+            <div class="preview-screen">
+              {{{screenTemplate 'one' editing}}}
             </div>
-          {{/isolate}}
+          </div>
         </div>
         <div class="row">
-          {{#isolate}}
-            <div class="screen-two col-xs-12">
-              <div class="screen-holder">
-                {{#if editing}}{{> typeSelector}}{{/if}}
-                <div class="screen-content embed">
-                  {{{withTemplate 'mp4' 'two'}}}
-                </div>
-              </div>
+          <div class="screen-two col-xs-12">
+            <div class="preview-screen">
+              {{{screenTemplate 'two' editing}}}
             </div>
-          {{/isolate}}
+          </div>
         </div>
         <div class="row">
-          {{#isolate}}
-            <div class="screen-three col-xs-12">
-              <div class="screen-holder">
-                {{#if editing}}{{> typeSelector}}{{/if}}
-                <div class="screen-content embed">
-                  {{{withTemplate 'mp4' 'three'}}}
-                </div>
-              </div>
+          <div class="screen-three col-xs-12">
+            <div class="preview-screen">
+              {{{screenTemplate 'three' editing}}}
             </div>
-          {{/isolate}}
+          </div>
         </div>
       </div>
     </div>

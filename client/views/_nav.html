@@ -12,8 +12,9 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-          <li>{{#link route='home'}}Launch{{/link}}</li>
           <li>{{#link route='dashboard'}}Dashboard{{/link}}</li>
+          <li>{{#link route='shows'}}Shows{{/link}}</li>
+          <li>{{#link route='screens'}}Screens{{/link}}</li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li>{{#link route='dashboard'}}{{currentUser.emails.0.address}}{{/link}}</li>
@@ -26,8 +27,4 @@
       </div><!--/.nav-collapse -->
     </div>
   </div>
-</template>
-
-<template name="404">
-  <h1>404: Not Found</h1>
 </template>

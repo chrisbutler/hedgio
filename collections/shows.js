@@ -4,10 +4,10 @@ showList = [
   {
     "name": "generic",
     "screens": {
-      "main": "G1",
-      "one": "M1",
-      "two": "M2",
-      "three": "M3"
+      "main": "GEN1",
+      "one": "MAC1",
+      "two": "MAC2",
+      "three": "MAC3"
     },
     "ticker": "www.hedgeye.com"
   }
