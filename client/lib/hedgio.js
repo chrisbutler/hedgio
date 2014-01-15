@@ -41,8 +41,3 @@ Template.screens.helpers({
   }
 });
 
-Template.showPicker.rendered = function() {
-  if (Session.get('goClass'))
-    $(this.find('.show-picker')).val(Session.get('showName'))
-}
-
