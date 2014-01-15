@@ -17,3 +17,8 @@ Template.edit.events({
     Session.set('main', '');
   } 
 });
+
+Template.navigation.rendered = function () {
+  $('.highlight-nav .active').removeClass('active');
+  $('.highlight-nav .' + Router.current().route.name + '-link').addClass('active');
+}
