@@ -69,6 +69,9 @@ Template.newScreen.events({
     });
     Session.set('selectedSrc', undefined);
     Router.go('screens');
+  },
+  'click .delete-button': function (event) {
+    Session.set('selectedSrc', undefined);
   }
 });
 

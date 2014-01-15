@@ -1,16 +1,8 @@
 .show-item-holder {
   padding: 0 7.5px;
   position: relative;
-  .delete-button {
-    position: absolute;
-    z-index: 1;
-    top: 8px;
-    right: 8px;
-    padding: 2px 5px;
-    background: white;
-    color: red;
-  }
 }
+
 .show-item {
   padding: 7.5px;
   margin: 7.5px 0;

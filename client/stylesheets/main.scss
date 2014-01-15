@@ -20,3 +20,13 @@
     display: block;
   }
 }
+
+.delete-button {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  right: 8px;
+  padding: 2px 5px;
+  background: white;
+  color: red;
+}
