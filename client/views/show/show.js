@@ -17,7 +17,7 @@ Template.showPicker.helpers({
 
 Template.showPicker.rendered = function() {
   if (Session.get('goClass'))
-    $(this.find('.show-picker')).val(Session.get('showName'))
+    $(this.find('.show-picker')).val(Session.get('showName'));
 }
 
 Template.showLayout.rendered = function() {

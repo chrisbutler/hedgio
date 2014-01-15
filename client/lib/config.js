@@ -4,6 +4,7 @@ Meteor.startup(function() {
   },1000);
   
   Session.setDefault('showName', 'generic');
+  Session.setDefault('selectedSector', 'generic');
 
   Accounts.ui.config({
     passwordSignupFields: 'EMAIL_ONLY'

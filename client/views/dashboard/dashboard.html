@@ -16,7 +16,7 @@
       <input type="text" class="form-control" id="ticker-text" value="{{ticker}}" placeholder="Enter ticker text here...">
     </div>
     <div class="col-sm-3 side-screens">
-      <button class="btn btn-primary btn-block">Save Show</button>
+      <button class="btn save-btn btn-primary btn-block">Save Show</button>
     </div>
   </div>
   {{> screensWidget}} 
@@ -30,12 +30,10 @@
 
 <template name="typeSelector">
   <div class="type-selector-container">
-    <div class="background"></div>
     <ul class="nav nav-pills">
       <li><a class="image-button"><i class="fa fa-camera"></i></a></li>
       <li><a class="video-button"><i class="fa fa-film"></i></a></li>
       <li><a class="yt-button"><i class="fa fa-youtube-play"></i></a></li>
-      <li><a class="remove-img-button"><i class="fa fa-ban"></i></a></li>
     </ul>
   </div>
 </template>

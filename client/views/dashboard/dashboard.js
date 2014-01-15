@@ -1,13 +1,16 @@
-Template.edit.events({
+Template.typeSelector.events({
   'click .image-button': function (event) {
     filepicker.pickAndStore(
       {
+        multiple: false,
         mimetypes: ['image/*'],
         services:['COMPUTER','URL', 'IMAGE_SEARCH'],
       },{
 
       },
       function(InkBlobs){
+        Session.set('selectedType', 'image');
+        Session.set('selectedSrc', InkBlobs[0].url);
         console.log(JSON.stringify(InkBlobs));
       }  
     );
@@ -15,12 +18,15 @@ Template.edit.events({
   'click .video-button': function (event) {
     filepicker.pickAndStore(
       {
+        multiple: false,
         mimetypes: ['video/mp4'],
         services:['COMPUTER'],
       },{
 
       },
       function(InkBlobs){
+        Session.set('selectedType', 'video');
+        Session.set('selectedSrc', InkBlobs[0].url);
         console.log(JSON.stringify(InkBlobs));
       }  
     );
@@ -33,25 +39,10 @@ Template.edit.events({
         console.log(result.replace(/.*v=(.*)/,"$1"));                          
       }
     });
-  },
-  'click .remove-img-button': function (event) {
-    Session.set('main', '');
-  } 
+  }
 });
 
 Template.navigation.rendered = function () {
   $('.highlight-nav .active').removeClass('active');
   $('.highlight-nav .' + Router.current().route.name + '-link').addClass('active');
 }
-
-Template.sectorNav.helpers({
-  sectors: function() {
-    return ['Macro','Energy','Financials','Gaming','Industrials','Retail','Restaurants'];
-  }
-});
-
-// Template.editorBar.helpers({
-//   sectors: function() {
-    
-//   }
-// });

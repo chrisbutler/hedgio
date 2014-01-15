@@ -1,3 +1,46 @@
+<template name="newScreen">
+  <div class="page-header">
+    <h1>New Screen</h1>
+  </div>
+  <div class="row new-screen">
+    <div class="col-xs-6 col-xs-offset-3">
+      <div class="show-item">
+        <h3>{{code}}</h3>
+        {{#if graphicSet}}
+          {{#with theGraphic}}
+            {{#isolate}}
+              <div class="preview-screen">
+                {{{withTemplate theType}}}
+              </div>
+            {{/isolate}}
+          {{/with}}
+        {{else}}
+          {{> typeSelector}}
+        {{/if}}
+        <div class="form-group">
+          <input type="text" class="form-control" id="screen-name" placeholder="Asset Name">
+        </div>
+        <div class="form-group">
+          {{#isolate}}
+            <select class="sector-picker form-control">
+              <option selected="selected" value="placeholder" disabled>Select a sector...</option>
+              <option value="generic">Generic</option>
+              {{#each theSectors}}
+                <option value="{{lowercase this}}">{{this}}</option>
+              {{/each}}
+            </select>
+          {{/isolate}}
+        </div>
+        {{#if graphicSet}}
+          <div class="form-group">
+            <button class="btn save-btn btn-primary btn-block">Save Screen</button>
+          </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>
+
 <template name="screens">
   <div class="page-header">
     {{#link route='newScreen' class='pull-right btn btn-large btn-success'}}Add Screen{{/link}}
@@ -8,7 +51,9 @@
   {{#each this}}
     <div class="show-item-holder col-sm-3">
       <div class="show-item">
-        {{{withTemplate type}}}
+        <div class="preview-screen">
+          {{{withTemplate type}}}
+        </div>
         <div class="show-item-info row">
           <div class="col-xs-12">
             <h3>{{code}}</h3>
@@ -23,7 +68,7 @@
 <template name="screenPicker">
   <div class="bar-holder">
     <div class="row">
-      <div class="form-group col-xs-12">
+      <div class="col-xs-12">
         {{#constant}}
           <select id="{{monitor}}" class="screen-picker form-control input-sm">
             <option selected="selected" disabled>Select a new screen...</option>
@@ -41,42 +86,50 @@
   <div class="screens-container">
     <div class="row">
       <div class="screen-main col-xs-9">
-        <div class="preview-screen">
-          {{{screenTemplate 'main'}}}
-        </div>
-        {{#if editing}}
-          {{> screenPicker main}}
-        {{/if}}
+        {{#isolate}}
+          <div class="preview-screen">
+            {{{screenTemplate 'main'}}}
+          </div>
+        {{/isolate}}
+          {{#if editing}}
+            {{> screenPicker main}}
+          {{/if}}
       </div>
       <div class="side-screens col-xs-3">
         <div class="row">
           <div class="screen-one col-xs-12">
-            <div class="preview-screen">
-              {{{screenTemplate 'one' editing}}}
-            </div>
-            {{#if editing}}
-              {{> screenPicker one}}
-            {{/if}}
+            {{#isolate}}
+              <div class="preview-screen">
+                {{{screenTemplate 'one' editing}}}
+              </div>
+            {{/isolate}}
+              {{#if editing}}
+                {{> screenPicker one}}
+              {{/if}}
           </div>
         </div>
         <div class="row">
           <div class="screen-two col-xs-12">
-            <div class="preview-screen">
-              {{{screenTemplate 'two' editing}}}
-            </div>
-            {{#if editing}}
-              {{> screenPicker two}}
-            {{/if}}
+            {{#isolate}}
+              <div class="preview-screen">
+                {{{screenTemplate 'two' editing}}}
+              </div>
+            {{/isolate}}
+              {{#if editing}}
+                {{> screenPicker two}}
+              {{/if}}
           </div>
         </div>
         <div class="row">
           <div class="screen-three col-xs-12">
-            <div class="preview-screen">
-              {{{screenTemplate 'three' editing}}}
-            </div>
-            {{#if editing}}
-              {{> screenPicker three}}
-            {{/if}}
+            {{#isolate}}
+              <div class="preview-screen">
+                {{{screenTemplate 'three' editing}}}
+              </div>
+            {{/isolate}}
+              {{#if editing}}
+                {{> screenPicker three}}
+              {{/if}}
           </div>
         </div>
       </div>

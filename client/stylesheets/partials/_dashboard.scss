@@ -14,11 +14,25 @@
 
 .preview-screen {
   //border: 1px solid #999;
+  img {
+    max-width: 100%;
+  }
+  .new-screen & {
+    margin: 15px 0;
+  }
+}
+
+.new-screen {
+  .show-item {
+    padding: 15px;
+  }
 }
 
 .bar-holder {
   position: relative;
-  margin-top: 9px;
+  margin-top: -60px;
+  padding: 15px;
+  background: transparent url(/transparency.png);
 }
 
 .text-row {
@@ -40,16 +54,15 @@
 }
 
 .type-selector-container {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  right: 0;
   .nav {
-    float: right;
     &.nav-pills li {
+      width: 33.3%;
+      margin: 0;
+      text-align: center;
       a {
         border-radius: 0;
         cursor: pointer;
+        font-size: 64px;
       }
       &.active a {
         //opacity: .5;
