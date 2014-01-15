@@ -46,8 +46,3 @@ Template.showPicker.rendered = function() {
     $(this.find('.show-picker')).val(Session.get('showName'))
 }
 
-// Template.theShow.rendered = function() {
-//   $('video.autoplayable').each(function() {
-//     $(this).get(0).play();
-//   });
-// }

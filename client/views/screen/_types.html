@@ -1,9 +1,9 @@
 <template name="image">
-  <img src="{{this.src}}" />
+  <img src="{{src}}" />
 </template>
 
 <template name="video">
-  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="{{screen.src}}" type="video/mp4">
+  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="{{src}}" type="video/mp4">
   </video>
 </template>
 
@@ -24,7 +24,7 @@
 
 <template name="videoPlaceholder">
   <div class="video-placeholder screen-holder">
-    <p>{{this.src}}</p>
+    <p>{{src}}</p>
     <img class="img-responsive" src="/video-placeholder.jpg">
   </div>
 </template>
