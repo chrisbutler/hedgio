@@ -1,43 +1,30 @@
-<template name="jpg">
-  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.jpg" />
+<template name="image">
+  <img src="{{this.src}}" />
 </template>
 
-<template name="png">
-  <img src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.png" />
-</template>
-
-<template name="text">
-  <div class="ticker">
-    <marquee behavior="alternate" direction="left">
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-      <span>{{marquee}}</span> | HEDGEYE | 
-  </div>
-</template>
-
-<template name="mp4">
-  <video class="autoplayable" width="100%" loop><source src="http://hedgviz.s3.amazonaws.com/{{showName}}/{{src}}.mp4" type="video/mp4">
+<template name="video">
+  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="{{screen.src}}" type="video/mp4">
   </video>
-</template>
-
-<template name="mp4URL">
-  <video class="autoplayable" width="100%" loop><source src="{{this}}" type="video/mp4">
-  </video>
-</template>
-
-<template name="mp4Placeholder">
-  <div class="video-placeholder screen-holder">
-    <p>{{showName}}/{{src}}.mp4</p>
-    <img class="img-responsive" src="/video-placeholder.jpg">
-  </div>
 </template>
 
 <template name="youtube">
-  <iframe width="480" height="270" src="//www.youtube.com/embed/{{src}}?playlist={{src}}&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen>
+  <iframe width="{{width}}" height="{{height}}" src="//www.youtube.com/embed/{{src}}?playlist={{src}}&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0" frameborder="0" allowfullscreen>
   </iframe>
+</template>
+
+<template name="ticker">
+  <div class="ticker">
+    <marquee behavior="alternate" direction="left">
+      {{#each tick}}
+        <span>{{src}}</span> | HEDGEYE | 
+      {{/each}}
+    </marquee>
+  </div>
+</template>
+
+<template name="videoPlaceholder">
+  <div class="video-placeholder screen-holder">
+    <p>{{this.src}}</p>
+    <img class="img-responsive" src="/video-placeholder.jpg">
+  </div>
 </template>

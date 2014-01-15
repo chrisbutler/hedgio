@@ -15,14 +15,14 @@ if (Meteor.isServer) {
   });
 }
 
-var showList = [
+var shows = [
   {
     "name": "default",
     "main": "http://hedgviz.s3.amazonaws.com/default/main.mp4",
     "one": "http://hedgviz.s3.amazonaws.com/default/one.mp4",
     "two": "http://hedgviz.s3.amazonaws.com/default/two.mp4",
     "three": "http://hedgviz.s3.amazonaws.com/default/three.mp4",
-    "text": "www.hedgeye.com"
+     "ticker": "www.hedgeye.com"
   },
   {
     "name": "financials",
@@ -30,15 +30,15 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/financials/one.jpg",
     "two": "http://hedgviz.s3.amazonaws.com/financials/two.jpg",
     "three": "http://hedgviz.s3.amazonaws.com/financials/three.jpg",
-    "text": "financials"
+     "ticker": "financials"
   },
   {
     "name": "macro",
     "main": "http://hedgviz.s3.amazonaws.com/macro/main.mp4",
-    "one": "http://hedgviz.s3.amazonaws.com/macro/one.mp4",
-    "two": "http://hedgviz.s3.amazonaws.com/macro/two.mp4",
-    "three": "http://hedgviz.s3.amazonaws.com/macro/three.mp4",
-    "text": "macro"
+    "one": "http://hedgviz.s3.amazonaws.com/macro/one.jpg",
+    "two": "http://hedgviz.s3.amazonaws.com/macro/two.jpg",
+    "three": "http://hedgviz.s3.amazonaws.com/macro/three.jpg",
+     "ticker": "macro"
   },
   {
     "name": "gaming",
@@ -46,7 +46,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/gaming/one.mp4",
     "two": "http://hedgviz.s3.amazonaws.com/gaming/two.mp4",
     "three": "http://hedgviz.s3.amazonaws.com/gaming/three.mp4",
-    "text": "gaming"
+     "ticker": "gaming"
   },
   {
     "name": "gold",
@@ -54,7 +54,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/gold/one.mp4",
     "two": "http://hedgviz.s3.amazonaws.com/gold/two.mp4",
     "three": "http://hedgviz.s3.amazonaws.com/gold/three.mp4",
-    "text": "gold"
+     "ticker": "gold"
   },
   {
     "name": "healthcare",
@@ -62,7 +62,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/healthcare/one.mp4",
     "two": "http://hedgviz.s3.amazonaws.com/healthcare/two.mp4",
     "three": "http://hedgviz.s3.amazonaws.com/healthcare/three.mp4",
-    "text": "healthcare"
+     "ticker": "healthcare"
   },
   {
     "name": "hedgetohedge",
@@ -70,7 +70,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/hedgetohedge/one.jpg",
     "two": "http://hedgviz.s3.amazonaws.com/hedgetohedge/two.jpg",
     "three": "http://hedgviz.s3.amazonaws.com/hedgetohedge/three.jpg",
-    "text": "Hedge-to-Hedge"
+     "ticker": "Hedge-to-Hedge"
   },
   {
     "name": "industrials",
@@ -78,7 +78,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/industrials/one.jpg",
     "two": "http://hedgviz.s3.amazonaws.com/industrials/two.jpg",
     "three": "http://hedgviz.s3.amazonaws.com/industrials/three.jpg",
-    "text": "industrials"
+     "ticker": "industrials"
   },
   {
     "name": "restaurants",
@@ -86,7 +86,7 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/restaurants/one.mp4",
     "two": "http://hedgviz.s3.amazonaws.com/restaurants/two.mp4",
     "three": "http://hedgviz.s3.amazonaws.com/restaurants/three.mp4",
-    "text": "restaurants"
+     "ticker": "restaurants"
   },
   {
     "name": "retail",
@@ -94,11 +94,11 @@ var showList = [
     "one": "http://hedgviz.s3.amazonaws.com/retail/one.jpg",
     "two": "http://hedgviz.s3.amazonaws.com/retail/two.jpg",
     "three": "http://hedgviz.s3.amazonaws.com/retail/three.jpg",
-    "text": "retail"
+     "ticker": "retail"
   }
 ];
 
-var screenList = [
+var screens = [
   {
     "number": "1",
     "name": "main",
@@ -129,12 +129,12 @@ var screenList = [
     "number": "6",
     "name": "ticker",
     "size": "large",
-    "src": ''
+    "src": ""
   },
   {
     "number": "7",
     "name": "multi",
     "size": "large",
-    "src": '/multiloop.gif'
+    "src": "/multiloop.gif"
   }
 ];

@@ -3,7 +3,7 @@ Meteor.startup(function() {
     filepicker.setKey("AQXb7iOxFTKu0sLBAd2W5z");
   },1000);
   
-  Session.setDefault('showName', 'default');
+  Session.setDefault('showName', 'generic');
 
   Accounts.ui.config({
     passwordSignupFields: 'EMAIL_ONLY'

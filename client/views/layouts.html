@@ -1,4 +1,42 @@
 <template name="1080p">
+  <div id="screen-1" class="screen large">
+    <div class="embed">
+      {{screenTemplate 'main'}}
+    </div>
+  </div>
+  <div id="screen-2" class="screen medium">
+    <div class="embed">
+      {{screenTemplate 'one'}}
+    </div>
+  </div>
+  <div id="screen-3" class="screen medium">
+    <div class="embed">
+      <img src="/hedgeye.png">
+    </div>
+  </div>
+  <div id="screen-4" class="screen medium">
+    <div class="embed">
+      {{screenTemplate 'two'}}
+    </div>
+  </div>
+  <div id="screen-5" class="screen medium">
+    <div class="embed">
+      {{screenTemplate 'three'}}
+    </div>
+  </div>
+  <div id="screen-6" class="screen large">
+    <div class="embed">
+      {{> ticker}}
+    </div>
+  </div>
+  <div id="screen-7" class="screen large">
+    <div class="embed">
+      <img src="/multiloop.gif">
+    </div>
+  </div>
+</template>
+
+<template name="showLayout">
   <div class="hdtv-1080">
     {{yield}}
   </div>
