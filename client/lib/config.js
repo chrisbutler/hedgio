@@ -4,7 +4,7 @@ Meteor.startup(function() {
   },1000);
   
   Session.setDefault('showName', 'generic');
-  Session.setDefault('selectedSector', 'generic');
+  Session.setDefault('selectedSector', null);
 
   Accounts.ui.config({
     passwordSignupFields: 'EMAIL_ONLY'
@@ -19,12 +19,3 @@ Meteor.startup(function() {
   });
 
 });
-
-// send sign-in url, use theedge!23 as secret code
-// use cropper and filepicker
-// bootstrap pill buttons to select type
-// image, mp4, url(?)
-// 63632374
-// hardcode screen layout
-// array of screens?
-// server sessions for remote control

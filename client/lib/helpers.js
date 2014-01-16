@@ -3,12 +3,14 @@ Handlebars.registerHelper('lowercase', function(s) {
 });
 
 Handlebars.registerHelper('width', function() {
-  //return 960;
+  // if (this.type = 'youtube');
+  //   return '960';
   return '100%';
 });
 
 Handlebars.registerHelper('height', function() {
-  //return 540;
+  // if (this.type = 'youtube');
+  //   return '540';
   return '100%';
 });
 
@@ -22,6 +24,8 @@ Handlebars.registerHelper('goClass', function() {
 
 Handlebars.registerHelper('screenTemplate', function(name, p) {
   var screen = Screens.findOne({code:this.screens[name]});
+  if (!screen)
+    return Template.placeholder();
   var t = screen.type;
   if (p == false && t == 'video')
     t += 'Placeholder';
