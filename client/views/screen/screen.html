@@ -71,7 +71,7 @@
       <div class="col-xs-12">
         {{#constant}}
           <select id="{{monitor}}" class="screen-picker form-control input-sm">
-            <option selected="selected" disabled>Select a new screen...</option>
+            <option selected="selected" value="placeholder" disabled>Select a new screen...</option>
             {{#each screens}}
               <option value="{{code}}">{{code}}: {{name}}</option>
             {{/each}}

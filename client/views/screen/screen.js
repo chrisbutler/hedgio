@@ -1,3 +1,13 @@
+Template.youtube.helpers({
+  params: function() {
+    if (Router.current().route.name == 'theShow') {
+      return '&loop=1&controls=0&autoplay=1&modestbranding=1&showinfo=0';
+    } else {
+      return '&controls=0&autoplay=0&modestbranding=1&showinfo=0';
+    }
+  }
+});
+
 Template.ticker.helpers({
   tick: function() {
     var arr = [];
@@ -42,7 +52,7 @@ Template.screenPicker.helpers({
 
 Template.newScreen.helpers({
   code: function() {
-    return Session.get('selectedSector').substr(0,3) + '' + (Session.get('selectedNumber'));
+    return (Session.get('selectedSector') || 'generic').substr(0,3) + '' + (Session.get('selectedNumber'));
   },
   graphicSet: function() {
     return Session.get('selectedSrc') != undefined;
@@ -61,7 +71,7 @@ Template.newScreen.events({
     Session.set('selectedSector', event.target.value);
   },
   'click .save-btn': function (event) {
-    var c = Session.get('selectedSector').substr(0,3) + '' + (Session.get('selectedNumber'));
+    var c = (Session.get('selectedSector').substr(0,3) + '' + (Session.get('selectedNumber'))).toUpperCase();
     var n = $('#screen-name').val();
     Screens.insert({code:c, name:n, sector:Session.get('selectedSector'), type:Session.get('selectedType'), src:Session.get('selectedSrc')}, function(error, result) {
       console.log(error);
@@ -76,12 +86,12 @@ Template.newScreen.events({
 });
 
 Template.newScreen.rendered = function() {
-  $(this.find('.sector-picker')).val(Session.get('selectedSector'));
+  $(this.find('.sector-picker')).val(Session.get('selectedSector') || 'placeholder');
 }
 
 Template.screensWidget.rendered = function() {
   var s = this.data;
   $('select').each(function(index) {
-    $(this).val(s.screens[this.id]);
+    $(this).val(s.screens[this.id] || 'placeholder');
   });
 }
