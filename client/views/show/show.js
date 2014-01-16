@@ -4,7 +4,7 @@ Template.showPicker.events({
       Router.go('theShow', {name:Session.get('showName')});
   },
   'change .show-picker': function (event) {
-    Session.set('goClass', 'btn-primary');
+    Session.set('goClass', 'btn-success');
     Session.set('showName', event.target.selectedOptions[0].text);
   }
 });

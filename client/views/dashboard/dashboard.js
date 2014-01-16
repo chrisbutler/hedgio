@@ -47,3 +47,13 @@ Template.navigation.rendered = function () {
   $('.highlight-nav .active').removeClass('active');
   $('.highlight-nav .' + Router.current().route.name + '-link').addClass('active');
 }
+
+Template.navigation.events({
+  'click .view-show-link': function (event) {
+    if (Session.get('goClass')) {
+      Router.go('theShow', {name:Session.get('showName')});
+    } else {
+      Router.go('dashboard');
+    }
+  }
+});

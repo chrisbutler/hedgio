@@ -3,7 +3,9 @@
     {{#link route='newShow' class='pull-right btn btn-large btn-success'}}Add Show{{/link}}
     <h1>Shows</h1>
   </div>
-  {{> showList}}
+  {{#each this}}
+    {{> showGridItem}}
+  {{/each}}
 </template>
 
 <template name="showPicker">
@@ -26,7 +28,6 @@
 
 <template name="showGridItem">
   <div class="show-item-holder col-sm-4">
-    {{#link route='delete' class='delete-button'}}<i class="fa fa-ban"></i>{{/link}}
     <div class="show-item">
       {{> screensWidget}}
       <div class="show-item-info row">
@@ -63,8 +64,8 @@
           <td>{{screens.two}}</td>
           <td>{{screens.three}}</td>
           <td>{{ticker}}</td>
-          <td>{{#link route='theShow' class='btn btn-sm btn-success'}}View{{/link}}</td>
           <td>{{#link route='edit' class='btn btn-sm btn-primary'}}Edit{{/link}}</td>
+          <td>{{#link route='theShow' class='btn btn-sm btn-success'}}GO{{/link}}</td>
         </tr>
       {{/each}}
     </tbody>

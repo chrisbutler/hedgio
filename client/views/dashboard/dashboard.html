@@ -1,10 +1,10 @@
 <template name="dashboard">
   <div class="page-header">
-    <h1>Shows</h1>
+    <h1>Dashboard</h1>
   </div>
-  {{#each this}}
-    {{> showGridItem}}
-  {{/each}}
+  {{> showPicker this}}
+  <hr>
+  {{> showList}}
 </template>
 
 <template name="edit">
