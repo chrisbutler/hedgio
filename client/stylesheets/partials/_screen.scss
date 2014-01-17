@@ -43,11 +43,12 @@
   }
 }
 
-.video-container {
+.media-container {
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
-  .video, iframe, video {
+  overflow: hidden;
+  .preview-screen, .video, iframe, video {
     position: absolute;
     top: 0;
     left: 0;

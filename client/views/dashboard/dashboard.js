@@ -11,7 +11,6 @@ Template.typeSelector.events({
       function(InkBlobs){
         Session.set('selectedType', 'image');
         Session.set('selectedSrc', InkBlobs[0].url);
-        console.log(JSON.stringify(InkBlobs));
       }  
     );
   },
@@ -27,7 +26,6 @@ Template.typeSelector.events({
       function(InkBlobs){
         Session.set('selectedType', 'video');
         Session.set('selectedSrc', InkBlobs[0].url);
-        console.log(JSON.stringify(InkBlobs));
       }  
     );
   },

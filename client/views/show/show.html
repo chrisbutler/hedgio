@@ -11,14 +11,12 @@
 <template name="showPicker">
   <div class="picker row">
     <div class="form-group col-xs-9">
-      {{#constant}}
-        <select class="show-picker form-control">
-          <option selected="selected" value="placeholder" disabled>Select a show...</option>
-          {{#each shows}}
-            <option value="{{name}}">{{name}}</option>
-          {{/each}}
-        </select>
-      {{/constant}}
+      <select class="show-picker form-control">
+        <option selected="selected" value="placeholder" disabled>Select a show...</option>
+        {{#each shows}}
+          <option value="{{name}}">{{name}}</option>
+        {{/each}}
+      </select>
     </div>
     <div class="form-group col-xs-3">
       <button class="go btn go-btn btn-block btn-default {{goClass}}">GO</button>

@@ -22,13 +22,13 @@
           <input type="text" class="form-control" id="screen-name" placeholder="Asset Name">
         </div>
         <div class="form-group">
-            <select class="sector-picker form-control">
-              <option selected="selected" value="placeholder" disabled>Select a sector...</option>
-              <option value="generic">Generic</option>
-              {{#each theSectors}}
-                <option value="{{lowercase this}}">{{this}}</option>
-              {{/each}}
-            </select>
+          <select class="sector-picker form-control">
+            <option selected="selected" value="placeholder" disabled>Select a sector...</option>
+            <option value="generic">Generic</option>
+            {{#each theSectors}}
+              <option value="{{lowercase this}}">{{this}}</option>
+            {{/each}}
+          </select>
         </div>
         {{#if graphicSet}}
           <div class="form-group">
@@ -48,8 +48,10 @@
   {{#each this}}
     <div class="show-item-holder col-sm-3">
       <div class="show-item">
-        <div class="preview-screen">
-          {{{withTemplate type}}}
+        <div class="media-container">
+          <div class="preview-screen">
+            {{{withTemplate type}}}
+          </div>
         </div>
         <div class="show-item-info row">
           <div class="col-xs-12">
@@ -66,14 +68,12 @@
   <div class="bar-holder">
     <div class="row">
       <div class="col-xs-12">
-        {{#constant}}
-          <select id="{{monitor}}" class="screen-picker form-control input-sm">
-            <option selected="selected" value="placeholder" disabled>Select a new screen...</option>
-            {{#each screens}}
-              <option value="{{code}}">{{code}}: {{name}}</option>
-            {{/each}}
-          </select>
-        {{/constant}}
+        <select id="{{monitor}}" class="screen-picker form-control input-sm">
+          <option selected="selected" value="placeholder" disabled>Select a new screen...</option>
+          {{#each screens}}
+            <option value="{{code}}">{{code}}: {{name}}</option>
+          {{/each}}
+        </select>
       </div>
     </div>
   </div>
@@ -84,8 +84,10 @@
     <div class="row">
       <div class="screen-main col-xs-9">
         {{#isolate}}
-          <div class="preview-screen">
-            {{{screenTemplate 'main'}}}
+          <div class="media-container">
+            <div class="preview-screen">
+              {{{screenTemplate 'main'}}}
+            </div>
           </div>
         {{/isolate}}
           {{#if editing}}
@@ -95,9 +97,13 @@
       <div class="side-screens col-xs-3">
         <div class="row">
           <div class="screen-one col-xs-12">
-              <div class="preview-screen">
-                {{{screenTemplate 'one' editing}}}
+            {{#isolate}}
+              <div class="media-container">
+                <div class="preview-screen">
+                  {{{screenTemplate 'one' editing}}}
+                </div>
               </div>
+            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker one}}
               {{/if}}
@@ -105,9 +111,13 @@
         </div>
         <div class="row">
           <div class="screen-two col-xs-12">
-              <div class="preview-screen">
-                {{{screenTemplate 'two' editing}}}
+            {{#isolate}}
+              <div class="media-container">
+                <div class="preview-screen">
+                  {{{screenTemplate 'two' editing}}}
+                </div>
               </div>
+            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker two}}
               {{/if}}
@@ -115,9 +125,13 @@
         </div>
         <div class="row">
           <div class="screen-three col-xs-12">
-              <div class="preview-screen">
-                {{{screenTemplate 'three' editing}}}
+            {{#isolate}}
+              <div class="media-container">
+                <div class="preview-screen">
+                  {{{screenTemplate 'three' editing}}}
+                </div>
               </div>
+            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker three}}
               {{/if}}

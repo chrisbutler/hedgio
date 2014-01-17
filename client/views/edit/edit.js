@@ -8,7 +8,6 @@ Template.edit.events({
     });
   },
   'click .save-btn': function (event) {
-    console.log($(event.target.offsetParent.parentNode).find('#ticker-text'));
     var t = $(event.target.offsetParent.parentNode).find('#ticker-text').val();
     Shows.update(this._id, {$set:{ticker:t}}, function(error, result) {
       console.log(error);
