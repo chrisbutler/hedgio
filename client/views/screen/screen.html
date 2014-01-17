@@ -22,7 +22,6 @@
           <input type="text" class="form-control" id="screen-name" placeholder="Asset Name">
         </div>
         <div class="form-group">
-          {{#isolate}}
             <select class="sector-picker form-control">
               <option selected="selected" value="placeholder" disabled>Select a sector...</option>
               <option value="generic">Generic</option>
@@ -30,7 +29,6 @@
                 <option value="{{lowercase this}}">{{this}}</option>
               {{/each}}
             </select>
-          {{/isolate}}
         </div>
         {{#if graphicSet}}
           <div class="form-group">
@@ -97,11 +95,9 @@
       <div class="side-screens col-xs-3">
         <div class="row">
           <div class="screen-one col-xs-12">
-            {{#isolate}}
               <div class="preview-screen">
                 {{{screenTemplate 'one' editing}}}
               </div>
-            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker one}}
               {{/if}}
@@ -109,11 +105,9 @@
         </div>
         <div class="row">
           <div class="screen-two col-xs-12">
-            {{#isolate}}
               <div class="preview-screen">
                 {{{screenTemplate 'two' editing}}}
               </div>
-            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker two}}
               {{/if}}
@@ -121,11 +115,9 @@
         </div>
         <div class="row">
           <div class="screen-three col-xs-12">
-            {{#isolate}}
               <div class="preview-screen">
                 {{{screenTemplate 'three' editing}}}
               </div>
-            {{/isolate}}
               {{#if editing}}
                 {{> screenPicker three}}
               {{/if}}

@@ -27,8 +27,6 @@ Handlebars.registerHelper('screenTemplate', function(name, p) {
   if (!screen)
     return Template.placeholder();
   var t = screen.type;
-  if (p == false && t == 'video')
-    t += 'Placeholder';
   if (screen)
     return Template[t](screen);
 });

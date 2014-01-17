@@ -8,6 +8,12 @@ Template.youtube.helpers({
   }
 });
 
+Template.video.helpers({
+  showThumbnail: function() {
+    return Router.current().route.name != 'theShow';
+  }
+});
+
 Template.ticker.helpers({
   tick: function() {
     var arr = [];

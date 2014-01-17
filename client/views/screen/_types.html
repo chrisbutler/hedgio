@@ -3,8 +3,14 @@
 </template>
 
 <template name="video">
-  <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="{{src}}" type="video/mp4">
-  </video>
+  {{#if showThumbnail}}
+    <div class="video-placeholder screen-holder">
+      <img src="http://hedgio.s3.amazonaws.com/thumbnails/{{code}}.jpg" />
+    </div>
+  {{else}}
+    <video class="autoplayable" width="{{width}}" height="{{height}}" autoplay loop><source src="{{src}}" type="video/mp4">
+    </video>
+  {{/if}}
 </template>
 
 <template name="youtube">
