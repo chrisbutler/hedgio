@@ -6,4 +6,13 @@ Meteor.startup(function() {
       role: 'media-producer'
     }
   });
+
+  if (Meteor.users.find().count())
+    Accounts.createUser({
+      'email' : 'media@hedgeye.com',
+      'password' : '10millionviews',
+      'profile': {
+        'name': 'Hedgeye Media'
+      }
+    })
 });
