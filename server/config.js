@@ -7,7 +7,7 @@ Meteor.startup(function() {
     }
   });
 
-  if (Meteor.users.find().count())
+  if (Meteor.users.find().count() == 0)
     Accounts.createUser({
       'email' : 'media@hedgeye.com',
       'password' : '10millionviews',

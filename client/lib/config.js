@@ -13,8 +13,7 @@ Meteor.startup(function() {
   AccountsEntry.config({
     logo: 'hedgio-logo.png',
     homeRoute: '/',
-    dashboardRoute: '/dashboard',
-    profileRoute: 'profile',
+    dashboardRoute: '/',
     showSignupCode: true
   });
 
